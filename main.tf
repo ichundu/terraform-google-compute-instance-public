@@ -44,6 +44,7 @@ resource "google_compute_instance" "instances" {
   count = "${var.amount}"
 
   name         = "${var.name_prefix}-${count.index+1}"
+  tags         = "${var.tags}"
   zone         = "${var.zone}"
   machine_type = "${var.machine_type}"
 

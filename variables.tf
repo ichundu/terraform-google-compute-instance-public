@@ -18,6 +18,12 @@ variable "name_prefix" {
   default     = "vm"
 }
 
+variable "tags" {
+  description = "The list of tags attached to the instance"
+  type        = "list"
+  default     = []
+}
+
 variable "machine_type" {
   description = "List of VM sizes: https://github.com/Eimert/terraform-google-compute-engine-instance#machine_type"
   default     = "n1-standard-2"

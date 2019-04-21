@@ -10,5 +10,5 @@ output "instances_self_links" {
 
 output "instances_tags" {
   description = "Output tags of created instances."
-  value       = "${google_compute_instance.instances.*.tags}"
+  value       = "${google_compute_instance.instances.*.tags[0]}"
 }
